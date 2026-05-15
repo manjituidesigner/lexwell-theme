@@ -289,8 +289,648 @@ img{
 
 
 
+/* =========================
+   SERVICE AREA
+========================= */
 
+.service-area{
+    padding: 105px 0 110px;
+    background: #f5f6f8;
+    overflow: hidden;
+}
 
+/* =========================
+   TOP
+========================= */
+
+.service-top{
+    display: grid;
+    grid-template-columns: 1.1fr 0.7fr auto;
+
+    gap: 55px;
+
+    align-items: start;
+
+    margin-bottom: 55px;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.service-subtitle{
+    display: inline-flex;
+    align-items: center;
+
+    height: 34px;
+
+    background: #e8edf5;
+
+    padding: 0 15px;
+
+    color: #0066ff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 24px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.service-heading h2{
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #001136;
+
+    font-size: 68px;
+    line-height: 0.96;
+
+    letter-spacing: -3px;
+
+    font-weight: 700;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.service-text{
+    padding-top: 12px;
+}
+
+.service-text p{
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #33415c;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    font-weight: 400;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.service-btn{
+    width: 185px;
+    height: 54px;
+
+    background: #001136;
+
+    border-radius: 100px;
+
+    padding-left: 7px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.service-btn-icon{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #0066ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 14px;
+}
+
+.service-btn-text{
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.service-wrapper{
+    display: flex;
+
+    min-height: 460px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.service-item{
+    position: relative;
+
+    width: 120px;
+
+    padding: 40px 28px;
+
+    border-right: 1px solid #d8dee9;
+
+    transition: 0.5s ease;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+/* ACTIVE + HOVER */
+
+.service-item.active,
+.service-item:hover{
+    width: 430px;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: #edf1f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0066ff;
+
+    font-size: 34px;
+
+    margin-bottom: 50px;
+
+    transition: 0.4s ease;
+}
+
+.active-icon{
+    background: #0066ff;
+    color: #fff;
+}
+
+/* =========================
+   VERTICAL TITLE
+========================= */
+
+.service-item h3{
+    position: absolute;
+
+    left: 35px;
+    bottom: 30px;
+
+    margin: 0;
+
+    color: #001136;
+
+    font-size: 22px;
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    font-weight: 700;
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    transition: 0.4s ease;
+}
+
+/* =========================
+   EXPAND CONTENT
+========================= */
+
+.service-hidden{
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: 0.45s ease;
+}
+
+.service-hidden h4{
+    margin: 0 0 18px;
+
+    color: #001136;
+
+    font-size: 28px;
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    font-weight: 700;
+}
+
+.service-hidden p{
+    max-width: 290px;
+
+    margin: 0;
+
+    color: #33415c;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    font-weight: 400;
+}
+
+/* =========================
+   ACTIVE CONTENT
+========================= */
+
+.service-item.active h3,
+.service-item:hover h3{
+    opacity: 0;
+}
+
+.service-item.active .service-hidden,
+.service-item:hover .service-hidden{
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+/* =========================
+   ACTIVE ICON
+========================= */
+
+.service-item:hover .service-icon{
+    background: #0066ff;
+    color: #fff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 1199px){
+
+    .service-top{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width: 991px){
+
+    .service-wrapper{
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .service-item,
+    .service-item.active,
+    .service-item:hover{
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .service-item{
+        padding: 35px 24px;
+    }
+
+    .service-item h3{
+        position: static;
+
+        writing-mode: initial;
+        transform: none;
+
+        margin-top: 25px;
+    }
+
+    .service-item.active h3,
+    .service-item:hover h3{
+        opacity: 1;
+    }
+
+    .service-hidden{
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+
+        margin-top: 20px;
+    }
+
+}
+
+@media(max-width: 767px){
+
+    .service-area{
+        padding: 80px 0;
+    }
+
+    .service-heading h2{
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+}
+
+/* =========================
+   SERVICE AREA END
+========================= */
+
+/* =========================
+   WORK AREA
+========================= */
+
+.work-area{
+    padding: 105px 0 0;
+    background: #f5f6f8;
+    overflow: hidden;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.work-top{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.work-image{
+    overflow: hidden;
+}
+
+.work-image img{
+    width: 100%;
+    height: 560px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.work-heading{
+    padding-top: 10px;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.work-subtitle{
+    display: inline-flex;
+    align-items: center;
+
+    height: 34px;
+
+    background: #e8edf5;
+
+    padding: 0 15px;
+
+    color: #0066ff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 28px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.work-heading h2{
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #001136;
+
+    font-size: 68px;
+    line-height: 0.96;
+
+    letter-spacing: -3px;
+
+    font-weight: 700;
+}
+
+/* =========================
+   PROCESS WRAPPER
+========================= */
+
+.work-process-wrapper{
+    position: relative;
+
+    margin-top: -150px;
+    margin-left: 275px;
+
+    background: #e9edf4;
+
+    padding: 42px 38px 40px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.work-process-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 28px;
+}
+
+/* =========================
+   PROCESS TOP
+========================= */
+
+.work-process-top{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 38px;
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.work-number{
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+
+    background: #001136;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 18px;
+    line-height: 1;
+
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.work-number.active{
+    background: #0066ff;
+}
+
+/* =========================
+   LINE
+========================= */
+
+.work-line{
+    flex: 1;
+
+    height: 1px;
+
+    border-top: 2px dotted #c2c9d4;
+
+    margin: 0 14px;
+}
+
+/* =========================
+   PLUS
+========================= */
+
+.work-plus{
+    color: #001136;
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+}
+
+.work-plus.blue{
+    color: #0066ff;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.work-content h3{
+    margin: 0 0 22px;
+
+    color: #001136;
+
+    font-size: 24px;
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    font-weight: 700;
+}
+
+.work-content p{
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #33415c;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    font-weight: 400;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 1199px){
+
+    .work-top{
+        grid-template-columns: 1fr;
+    }
+
+    .work-process-wrapper{
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+}
+
+@media(max-width: 991px){
+
+    .work-process-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width: 767px){
+
+    .work-area{
+        padding: 80px 0;
+    }
+
+    .work-image img{
+        height: 420px;
+    }
+
+    .work-heading h2{
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+    .work-process-wrapper{
+        padding: 28px 24px;
+    }
+
+    .work-content h3{
+        font-size: 22px;
+    }
+
+}
+
+/* =========================
+   WORK AREA END
+========================= */
 
 
 /* =========================
