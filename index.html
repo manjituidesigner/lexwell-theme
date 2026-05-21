@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Solvior - Home 05</title>
     <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
 />
@@ -13,10 +13,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon">
+                <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="62" height="62" rx="12" fill="#0075FF"/>
+                    <path d="M20 22H28V34L36 22H44L34 36L46 48H38L26 36V48H20V22Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
     
 
 
@@ -62,19 +78,19 @@
 
                 <div class="topbar-right">
 
-                    <a href="#">
-
-                        <i class="bi bi-clock"></i>
-
-                        Mon - Friday from 9:00 - 18:00
-
-                    </a>
-
-                    <a href="mailto:support@solvior.com">
+                    <a href="mailto:digital.lexwell@gmail.com">
 
                         <i class="bi bi-envelope"></i>
 
-                        support@solvior.com
+                        digital.lexwell@gmail.com
+
+                    </a>
+
+                    <a href="tel:+919915999371">
+
+                        <i class="bi bi-telephone"></i>
+
+                        +91 9915999371
 
                     </a>
 
@@ -107,8 +123,8 @@
                     <a href="#">
 
                         <img
-                            src="https://lexwell.co/wp-content/uploads/2025/02/Lexwell-logo.png"
-                            alt="logo"
+                            src="https://lexwell.co.in/wp-content/uploads/2023/09/logo-main-blue.svg"
+                            alt="Lexwell"
                         >
 
                     </a>
@@ -121,7 +137,8 @@
 
                     <ul>
 
-                        <li>
+                        <!-- Start Your Business (Mega Menu) -->
+                        <li class="has-mega">
 
                             <a href="#">
 
@@ -131,9 +148,36 @@
 
                             </a>
 
+                            <div class="mega-menu">
+
+                                <div class="mega-col">
+
+                                    <h4>Business Registration</h4>
+
+                                    <a href="/private-company-registration/">Private Company</a>
+
+                                    <a href="/public-company-registration/">Public Company</a>
+
+                                    <a href="/one-person-company/">One Person Company</a>
+
+                                    <a href="/limited-liability-registration/">Limited Liability Partnership</a>
+
+                                    <a href="/section-8-non-profit-company/">Section 8 Company</a>
+
+                                    <a href="/nidhi-company/">Nidhi Company</a>
+
+                                    <a href="/indian-subsidiary/">Indian Subsidiary</a>
+
+                                    <a href="/start-up-registration/">Start-Up Registration</a>
+
+                                </div>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- Registration (Mega Menu) -->
+                        <li class="has-mega">
 
                             <a href="#">
 
@@ -143,9 +187,32 @@
 
                             </a>
 
+                            <div class="mega-menu">
+
+                                <div class="mega-col">
+
+                                    <h4>Registration/Licenses</h4>
+
+                                    <a href="/shop-and-commercial-registration/">Shop and Commercial Registration</a>
+
+                                    <a href="/gst-registration/">GST Registration</a>
+
+                                    <a href="/iec-registration/">IEC Registration</a>
+
+                                    <a href="/digital-signature/">Digital Signature</a>
+
+                                    <a href="/lei-registration/">LEI Registration</a>
+
+                                    <a href="/fssai-registration-and-license/">FSSAI Registration and License</a>
+
+                                </div>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- Returns (Simple Dropdown) -->
+                        <li class="has-dropdown">
 
                             <a href="#">
 
@@ -155,9 +222,24 @@
 
                             </a>
 
+                            <div class="dropdown-menu">
+
+                                <a href="/gst-returns/">GST Returns</a>
+
+                                <a href="/income-tax-returns/">Income Tax Returns</a>
+
+                                <a href="/tds-returns/">TDS Returns</a>
+
+                                <a href="/tds-returns-revision/">TDS Returns Revision</a>
+
+                                <a href="/food-licence-return/">Food Licence Return</a>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- ROC Compliances (Mega Menu) -->
+                        <li class="has-mega">
 
                             <a href="#">
 
@@ -167,9 +249,60 @@
 
                             </a>
 
+                            <div class="mega-menu">
+
+                                <div class="mega-col">
+
+                                    <h4>Mandatory Compliances</h4>
+
+                                    <a href="/annual-filing-for-pvt-ltd/">Annual Filing for Pvt Ltd</a>
+
+                                    <a href="/annual-filing-for-public-ltd-company/">Annual Filing for Public Ltd Company</a>
+
+                                    <a href="/annual-filing-for-llp/">Annual Filing for LLP</a>
+
+                                    <a href="/annual-filing-for-opc/">Annual Filing for OPC</a>
+
+                                    <a href="/annual-filing-for-section-8/">Annual Filing for Section 8</a>
+
+                                    <a href="/annual-filing-for-nidhi-company/">Annual Filing for Nidhi Company</a>
+
+                                </div>
+
+                                <div class="mega-col">
+
+                                    <h4>Company Closure</h4>
+
+                                    <a href="/strike-off-of-a-public-and-private-company/">Strike Off of a Public and Private Company</a>
+
+                                    <a href="/strike-off-of-a-opc/">Strike Off of a OPC</a>
+
+                                    <a href="/strike-off-of-a-llp/">Strike Off of a LLP</a>
+
+                                </div>
+
+                                <div class="mega-col">
+
+                                    <h4>Event Base Services</h4>
+
+                                    <a href="/change-company-name/">Change Company Name</a>
+
+                                    <a href="/increase-in-authorized-capital/">Increase in Authorized Capital</a>
+
+                                    <a href="/change-in-llp-name/">Change in LLP Name</a>
+
+                                    <a href="/alteration-in-moa/">Alteration in MOA</a>
+
+                                    <a href="/alteration-in-aoa/">Alteration in AOA</a>
+
+                                </div>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- Reports/Loans (Mega Menu) -->
+                        <li class="has-mega">
 
                             <a href="#">
 
@@ -179,9 +312,26 @@
 
                             </a>
 
+                            <div class="mega-menu">
+
+                                <div class="mega-col">
+
+                                    <h4>Reports/Loans</h4>
+
+                                    <a href="/roc-search-report/">ROC Search Report</a>
+
+                                    <a href="/due-diligence-report/">Due Diligence Report</a>
+
+                                    <a href="/cma-report-preparation/">CMA Report Preparation</a>
+
+                                </div>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- XBRL Filing (Mega Menu) -->
+                        <li class="has-mega">
 
                             <a href="#">
 
@@ -191,9 +341,24 @@
 
                             </a>
 
+                            <div class="mega-menu">
+
+                                <div class="mega-col">
+
+                                    <h4>XBRL Filing</h4>
+
+                                    <a href="/private-limited-xbrl-public-limited-xbrl-inds-xbrl/">XBRL Filing of Standalone Financial Statements</a>
+
+                                    <a href="/xbrl-filing-of-standalone-and-consolidated-statements/">XBRL Filing of Standalone and Consolidated Statements</a>
+
+                                </div>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- Trademark & Copyrights (Mega Menu) -->
+                        <li class="has-mega">
 
                             <a href="#">
 
@@ -203,9 +368,40 @@
 
                             </a>
 
+                            <div class="mega-menu">
+
+                                <div class="mega-col">
+
+                                    <h4>Trademark</h4>
+
+                                    <a href="/trademark-registration/">Trademark Registration</a>
+
+                                    <a href="/trademark-objection/">Trademark Objection</a>
+
+                                    <a href="/trademark-renewal/">Trademark Renewal</a>
+
+                                    <a href="/trademark-assignment/">Trademark Assignment</a>
+
+                                    <a href="/trademark-hearing/">Trademark Hearing</a>
+
+                                    <a href="/trademark-opposition/">Trademark Opposition</a>
+
+                                </div>
+
+                                <div class="mega-col">
+
+                                    <h4>Copyright</h4>
+
+                                    <a href="/copyright-registration/">Copyright Registration</a>
+
+                                </div>
+
+                            </div>
+
                         </li>
 
-                        <li>
+                        <!-- Accounting (Simple Dropdown) -->
+                        <li class="has-dropdown">
 
                             <a href="#">
 
@@ -214,6 +410,12 @@
                                 <i class="bi bi-chevron-down"></i>
 
                             </a>
+
+                            <div class="dropdown-menu">
+
+                                <a href="/book-keeping/">Book-Keeping</a>
+
+                            </div>
 
                         </li>
 
@@ -251,12 +453,6 @@
 
 <section class="hero-area">
 
-    <!-- BG SHAPES -->
-
-    <div class="hero-circle-shape"></div>
-
-    <div class="hero-bottom-shape"></div>
-
     <div class="container">
 
         <div class="hero-wrapper">
@@ -278,7 +474,7 @@
 
                 <!-- BUTTON -->
 
-                <a href="#" class="hero-btn">
+                <a href="#" class="hero-btn hover-shine">
 
                     <span class="hero-btn-icon">
                         <i class="bi bi-arrow-right"></i>
@@ -298,7 +494,7 @@
 
                 <!-- MAIN IMAGE -->
 
-                <div class="hero-main-image">
+                <div class="hero-main-image hover-shine">
 
                     <img
                         src="https://solvior.themejunction.net/wp-content/uploads/2025/05/h5-hero.webp"
@@ -330,17 +526,17 @@
                     <div class="hero-client-images">
 
                         <img
-                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            src="https://solvior.themejunction.net/wp-content/uploads/2025/05/thumb-1.png"
                             alt=""
                         >
 
                         <img
-                            src="https://randomuser.me/api/portraits/men/44.jpg"
+                            src="https://solvior.themejunction.net/wp-content/uploads/2025/05/thumb-2.png"
                             alt=""
                         >
 
                         <img
-                            src="https://randomuser.me/api/portraits/women/68.jpg"
+                            src="https://solvior.themejunction.net/wp-content/uploads/2025/05/thumb-3.png"
                             alt=""
                         >
 
@@ -374,7 +570,7 @@
      FEATURE AREA START
 ========================= -->
 
-<section class="feature-area">
+<section class="feature-area wow fadeInUp">
 
     <div class="container-fluid p-0">
 
@@ -382,7 +578,7 @@
 
             <!-- CARD 1 -->
 
-            <div class="feature-card feature-news-card">
+            <div class="feature-card feature-news-card wow fadeInUp" data-wow-delay="0.1s">
 
                 <!-- NUMBER -->
 
@@ -547,7 +743,7 @@
      ABOUT AREA START
 ========================= -->
 
-<section class="about-area">
+<section class="about-area wow fadeInUp" data-wow-delay="0.2s">
 
     <div class="container">
 
@@ -555,7 +751,7 @@
 
             <!-- LEFT -->
 
-            <div class="about-left">
+            <div class="about-left wow fadeInLeft" data-wow-delay="0.2s">
 
                 <!-- IMAGE WRAPPER -->
 
@@ -607,7 +803,7 @@
 
             <!-- RIGHT -->
 
-            <div class="about-right">
+            <div class="about-right wow fadeInRight" data-wow-delay="0.3s">
 
                 <span class="about-subtitle">
                     • ABOUT OUR COMPANY
@@ -651,7 +847,7 @@
 
                 <!-- BUTTON -->
 
-                <a href="#" class="about-btn">
+                <a href="#" class="about-btn hover-shine">
 
                     <span class="about-btn-icon">
                         <i class="bi bi-arrow-right"></i>
@@ -691,7 +887,7 @@
      SERVICE AREA START
 ========================= -->
 
-<section class="service-area">
+<section class="service-area wow fadeInUp" data-wow-delay="0.3s">
 
     <div class="container">
 
@@ -727,7 +923,7 @@
 
             <div class="service-btn-wrap">
 
-                <a href="#" class="service-btn">
+                <a href="#" class="service-btn hover-shine">
 
                     <span class="service-btn-icon">
                         <i class="bi bi-arrow-right"></i>
@@ -749,7 +945,7 @@
 
             <!-- ITEM 1 -->
 
-            <div class="service-item">
+            <div class="service-item wow fadeInUp" data-wow-delay="0.05s">
 
                 <div class="service-icon">
 
@@ -929,7 +1125,7 @@
      WORK PROCESS AREA START
 ========================= -->
 
-<section class="work-area">
+<section class="work-area wow fadeInUp" data-wow-delay="0.3s">
 
     <div class="container">
 
@@ -968,27 +1164,27 @@
 
         <div class="work-process-wrapper">
 
-            <div class="work-process-grid">
+        <div class="work-process-grid">
 
-                <!-- ITEM 1 -->
+            <!-- ITEM 1 -->
 
-                <div class="work-process-item">
+            <div class="work-process-item wow fadeInUp" data-wow-delay="0.1s">
 
-                    <!-- TOP -->
+                <!-- TOP -->
 
-                    <div class="work-process-top">
+                <div class="work-process-top">
 
-                        <div class="work-number">
-                            01.
-                        </div>
-
-                        <div class="work-line"></div>
-
-                        <div class="work-plus">
-                            <i class="bi bi-plus-lg"></i>
-                        </div>
-
+                    <div class="work-number">
+                        01.
                     </div>
+
+                    <div class="work-line"></div>
+
+                    <div class="work-plus">
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+
+                </div>
 
                     <!-- CONTENT -->
 
@@ -1087,7 +1283,7 @@
      PROJECT AREA START
 ========================= -->
 
-<section class="project-area">
+<section class="project-area wow fadeInUp" data-wow-delay="0.3s">
 
     <div class="container">
 
@@ -1111,11 +1307,11 @@
 
             <!-- ITEM 1 -->
 
-            <div class="project-item">
+            <div class="project-item wow fadeInUp" data-wow-delay="0.1s">
 
                 <!-- IMAGE -->
 
-                <div class="project-image">
+                <div class="project-image hover-shine">
 
                     <img
                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
@@ -1219,7 +1415,7 @@
      PRICING AREA START
 ========================= -->
 
-<section class="pricing-area">
+<section class="pricing-area wow fadeInUp" data-wow-delay="0.3s">
 
     <div class="container">
 
@@ -1265,7 +1461,7 @@
 
             <div class="pricing-right">
 
-                <div class="pricing-card">
+                <div class="pricing-card wow fadeInUp" data-wow-delay="0.1s">
 
                     <!-- LEFT CARD -->
 
@@ -1392,7 +1588,7 @@
      TESTIMONIAL AREA START
 ========================= -->
 
-<section class="testimonial-area">
+<section class="testimonial-area wow fadeInUp" data-wow-delay="0.3s">
 
     <!-- SHAPE -->
     <div class="testimonial-shape"></div>
@@ -1419,7 +1615,7 @@
 
             <!-- CARD 1 -->
 
-            <div class="testimonial-card">
+            <div class="testimonial-card wow fadeInUp" data-wow-delay="0.1s">
 
                 <!-- TOP -->
 
@@ -1613,7 +1809,7 @@
      BLOG AREA START
 ========================= -->
 
-<section class="blog-area">
+<section class="blog-area wow fadeInUp" data-wow-delay="0.3s">
 
     <div class="container">
 
@@ -1668,9 +1864,9 @@
 
             <!-- CARD 1 -->
 
-            <div class="blog-card">
+            <div class="blog-card wow fadeInUp" data-wow-delay="0.1s">
 
-                <div class="blog-image">
+                <div class="blog-image hover-shine">
 
                     <img
                         src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
@@ -1847,7 +2043,7 @@
      CTA AREA START
 ========================= -->
 
-<section class="cta-area">
+<section class="cta-area wow fadeInUp" data-wow-delay="0.3s">
 
     <div class="container">
 
@@ -1866,7 +2062,7 @@
             <div class="cta-buttons">
 
                 <!-- BUTTON -->
-                <a href="#" class="cta-btn">
+                <a href="#" class="cta-btn hover-shine">
 
                     <span class="cta-icon">
                         <i class="bi bi-envelope-fill"></i>
@@ -2050,7 +2246,151 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/script.js"></script>
+
+<!-- GSAP for advanced animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+<!-- WOW.js for scroll animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<!-- Swiper for sliders -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="assets/js/script.js"></script>
+
+<script>
+    // Preloader fade out
+    window.addEventListener('load', function(){
+        document.querySelector('.preloader').classList.add('fade-out');
+        document.body.classList.add('loaded');
+    });
+
+    // Initialize WOW.js
+    new WOW({
+        boxClass:     'wow',
+        animateClass: 'animated',
+        offset:       100,
+        mobile:       false,
+        live:         true
+    }).init();
+
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function(){
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navArea = document.querySelector('.navbar-nav-area');
+        if(menuBtn && navArea){
+            menuBtn.addEventListener('click', function(){
+                navArea.classList.toggle('open');
+                menuBtn.classList.toggle('active');
+                const icon = menuBtn.querySelector('i');
+                if(icon){
+                    icon.className = navArea.classList.contains('open') ? 'bi bi-x' : 'bi bi-list';
+                }
+            });
+        }
+
+        // Mobile submenu toggles (click instead of hover)
+        document.querySelectorAll('.navbar-nav-area ul li.has-dropdown > a, .navbar-nav-area ul li.has-mega > a').forEach(function(link){
+            link.addEventListener('click', function(e){
+                if(window.innerWidth <= 1199){
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
+        });
+    });
+
+    // GSAP Scroll Animations
+    document.addEventListener('DOMContentLoaded', function(){
+        if(typeof gsap === 'undefined') return;
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero entrance animations — fire after preloader hides (on window.load)
+        function heroEntrance(){
+            // Hero text split animation
+            const heroTitle = document.querySelector('.hero-content h1');
+            if(heroTitle && typeof SplitText !== 'undefined'){
+                const split = new SplitText(heroTitle, {type: 'lines'});
+                gsap.from(split.lines, {
+                    y: 80,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: 'power3.out'
+                });
+            }
+
+            // Hero paragraph & button fade in
+            gsap.from('.hero-content p, .hero-content .hero-btn', {
+                y: 60,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power2.out'
+            });
+
+            // Hero image fade in
+            gsap.from('.hero-image-area', {
+                x: 100,
+                opacity: 0,
+                duration: 1,
+                ease: 'power2.out'
+            });
+        }
+
+        // If page already loaded (cached images), run instantly; otherwise wait for load
+        if(document.readyState === 'complete'){
+            heroEntrance();
+        } else {
+            window.addEventListener('load', heroEntrance);
+        }
+
+        // Counter animation on scroll
+        document.querySelectorAll('.about-counter-item h3').forEach(counter => {
+            const target = parseInt(counter.textContent);
+            if(!isNaN(target)){
+                gsap.from(counter, {
+                    textContent: 0,
+                    duration: 2,
+                    ease: 'power1.out',
+                    scrollTrigger: {
+                        trigger: counter,
+                        start: 'top 85%'
+                    },
+                    onUpdate: function(){
+                        counter.textContent = Math.round(this.targets()[0].textContent) + '%';
+                    }
+                });
+            }
+        });
+
+        // Service items stagger animation
+        gsap.from('.service-item', {
+            y: 40,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.service-wrapper',
+                start: 'top 85%'
+            }
+        });
+
+        // Section reveal animations
+        document.querySelectorAll('.feature-area, .about-area, .service-area, .work-area, .project-area, .pricing-area, .testimonial-area, .blog-area, .cta-area').forEach(section => {
+            ScrollTrigger.create({
+                trigger: section,
+                start: 'top 85%',
+                onEnter: function(){
+                    section.classList.add('section-reveal', 'revealed');
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
