@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    font-family: "Manrope", sans-serif;
+    font-family: "Lato", sans-serif;
     background: #05060a;
     color: #ffffff;
     overflow-x: hidden;
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6{
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     margin: 0;
 }
 
@@ -498,6 +498,11 @@ img{
     position: relative;
 }
 
+.navbar-area {
+    position: relative;
+    z-index: 1000;
+}
+
 .navbar-nav-area ul li .dropdown-menu,
 .navbar-nav-area ul li .mega-menu{
     position: absolute;
@@ -508,8 +513,9 @@ img{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    margin-top: 20px;
 
-    transition: 0.3s ease;
+    transition: all 0.4s ease;
 
     background: #ffffff;
 
@@ -523,6 +529,7 @@ img{
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    margin-top: 0;
 }
 
 /* Simple Dropdown */
@@ -537,7 +544,8 @@ img{
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
-.navbar-nav-area ul li .dropdown-menu::before{
+.navbar-nav-area ul li .dropdown-menu::before,
+.navbar-nav-area ul li .mega-menu::before{
     content: "";
     position: absolute;
     top: 0;
@@ -548,11 +556,13 @@ img{
     transition: 0.6s;
 }
 
-.navbar-nav-area ul li:hover .dropdown-menu::before{
+.navbar-nav-area ul li:hover .dropdown-menu::before,
+.navbar-nav-area ul li:hover .mega-menu::before{
     width: 100%;
 }
 
 .navbar-nav-area ul li .dropdown-menu a{
+    display: block;
     padding: 12px 15px;
 
     font-size: 15px;
@@ -593,21 +603,19 @@ img{
 /* Mega Menu */
 
 .navbar-nav-area ul li .mega-menu{
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
 
     display: flex;
     gap: 0;
 
-    padding: 0;
+    padding: 10px;
 
-    max-width: 1320px;
-    width: calc(100% - 30px);
+    width: max-content;
+    max-width: 100vw;
 }
 
 .navbar-nav-area ul li .mega-menu .mega-col{
-    min-width: 180px;
-
+    min-width: 260px;
     flex: 1;
 
     padding: 28px 12px 24px;
@@ -631,18 +639,20 @@ img{
 }
 
 .navbar-nav-area ul li .mega-menu .mega-col a{
-    padding: 12px 16px;
+    display: block;
+    padding: 10px 16px;
 
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
 
-    line-height: 1;
+    line-height: 1.5;
 
     color: #676e7a;
 
     border-left: none;
 
     position: relative;
+    white-space: normal;
 }
 
 .navbar-nav-area ul li .mega-menu .mega-col a::before{
@@ -703,6 +713,36 @@ img{
     overflow: hidden;
 
     padding: 10px 0 0;
+    z-index: 1;
+}
+
+/* =========================
+   BACKGROUND SHAPES
+========================= */
+
+.hero-shapes-1{
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    z-index: -1;
+    animation: upDown 4s ease-in-out infinite alternate;
+}
+
+.hero-shapes-2{
+    position: absolute;
+    bottom: -15%;
+    left: -10%;
+    z-index: -1;
+    animation: upDown 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(30px);
+    }
 }
 
 /* =========================
@@ -734,6 +774,44 @@ img{
 }
 
 /* =========================
+   SUBTITLE BADGE
+========================= */
+
+.hero-subtitle{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #ffffff;
+    padding: 6px 16px 6px 6px;
+    border-radius: 100px;
+
+    color: #4a556d;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.hero-subtitle span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 28px;
+    height: 28px;
+    
+    background: #0066ff;
+    color: #ffffff;
+    border-radius: 50%;
+    
+    font-size: 12px;
+}
+
+/* =========================
    HEADING
 ========================= */
 
@@ -745,13 +823,11 @@ img{
     color: #001136;
 
     font-size: 52px;
-    line-height: 1.08;
+    line-height: 1.1;
 
-    letter-spacing: -3px;
+    letter-spacing: -1px;
 
     font-weight: 700;
-
-    font-family: 'Literata', Georgia, serif;
 }
 
 .hero-content h1 span{
@@ -780,23 +856,23 @@ img{
 ========================= */
 
 .hero-btn{
-    width: 250px;
-    height: 70px;
+    width: max-content;
+    height: 56px;
 
     background: #001136;
 
     border-radius: 100px;
 
-    padding-left: 9px;
+    padding: 0 30px 0 6px;
 
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
 }
 
 .hero-btn-icon{
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
 
     border-radius: 50%;
 
@@ -808,16 +884,17 @@ img{
 
     color: #fff;
 
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .hero-btn-text{
     color: #fff;
 
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1;
 
-    font-weight: 700;
+    font-weight: 600;
+    font-family: "Libre Franklin", sans-serif;
 }
 
 /* =========================
@@ -836,12 +913,8 @@ img{
 
 .hero-main-image{
     position: relative;
-
-    height: 460px;
-
-    border-radius: 20px;
-
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
 
     display: flex;
     align-items: flex-end;
@@ -850,13 +923,8 @@ img{
 
 .hero-main-image img{
     width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center;
-
+    max-width: 450px;
+    height: auto;
     display: block;
 }
 
@@ -868,28 +936,29 @@ img{
 .hero-play-btn{
     position: absolute;
 
-    top: 220px;
+    top: 50%;
+    transform: translateY(-50%);
     right: -20px;
 
-    width: 250px;
-    height: 76px;
+    width: max-content;
+    height: 56px;
 
-    background: rgba(255,255,255,0.92);
+    background: #ffffff;
 
     border-radius: 100px;
 
-    padding-left: 10px;
+    padding: 0 24px 0 6px;
 
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
 
-    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .hero-play-icon{
-    width: 56px;
-    height: 56px;
+    width: 44px;
+    height: 44px;
 
     border-radius: 50%;
 
@@ -901,16 +970,18 @@ img{
 
     color: #fff;
 
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .hero-play-text{
     color: #001136;
 
-    font-size: 22px;
+    font-size: 15px;
     line-height: 1;
 
-    font-weight: 600;
+    font-weight: 700;
+    text-decoration: underline;
+    font-family: "Libre Franklin", sans-serif;
 }
 
 /* =========================
@@ -920,16 +991,18 @@ img{
 .hero-client-box{
     position: absolute;
 
-    left: -140px;
-    bottom: 90px;
+    left: -60px;
+    bottom: 60px;
 
-    width: 290px;
+    width: max-content;
+    max-width: 250px;
 
-    background: rgba(255,255,255,0.92);
+    background: #ffffff;
 
-    padding: 26px 24px;
+    padding: 20px 24px;
 
-    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border-radius: 8px;
 }
 
 .hero-client-images{
@@ -5458,6 +5531,22 @@ h1, h2, h3, h4, h5, h6{
     .pricing-wrapper{
         flex-direction: column;
     }
+    .hero-wrapper{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .hero-content h1{
+        font-size: 42px;
+    }
+    .navbar-wrapper{
+        gap: 15px;
+    }
+    .navbar-nav-area ul{
+        display: none; /* Hide on small screens for mobile menu */
+    }
+    .mobile-menu-btn{
+        display: block; /* Show mobile menu button */
+    }
 }
 
 /* =========================
@@ -5481,6 +5570,12 @@ h1, h2, h3, h4, h5, h6{
 
     .feature-card:hover{
         background: transparent;
+    }
+    .hero-content h1{
+        font-size: 36px;
+    }
+    .hero-main-image{
+        height: 300px;
     }
 }
 
