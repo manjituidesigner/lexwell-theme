@@ -503,6 +503,13 @@ img{
     z-index: 1000;
 }
 
+/* Prevent dropdowns from going off-screen on the right */
+.navbar-nav-area ul li:nth-last-child(-n+3) .dropdown-menu,
+.navbar-nav-area ul li:nth-last-child(-n+3) .mega-menu {
+    left: auto;
+    right: 0;
+}
+
 .navbar-nav-area ul li .dropdown-menu,
 .navbar-nav-area ul li .mega-menu{
     position: absolute;
@@ -615,37 +622,31 @@ img{
 }
 
 .navbar-nav-area ul li .mega-menu .mega-col{
-    min-width: 260px;
+    min-width: 200px;
     flex: 1;
 
-    padding: 28px 12px 24px;
+    padding: 20px 10px 16px;
 }
 
 .navbar-nav-area ul li .mega-menu .mega-col h4{
-    margin: 0 0 10px;
-
-    padding: 0 16px 8px;
-
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-
     color: #0066ff;
 
-    border-bottom: 1px solid #e8edf4;
-
-    font-family: "Manrope", sans-serif;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eef1f6;
 }
 
 .navbar-nav-area ul li .mega-menu .mega-col a{
     display: block;
-    padding: 10px 16px;
+    padding: 8px 12px;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 
-    line-height: 1.5;
+    line-height: 1.3;
 
     color: #676e7a;
 
@@ -774,41 +775,296 @@ img{
 }
 
 /* =========================
-   SUBTITLE BADGE
+   DYNAMIC ANIMATED SERVICES
 ========================= */
 
-.hero-subtitle{
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    background: #ffffff;
-    padding: 6px 16px 6px 6px;
-    border-radius: 100px;
-
-    color: #4a556d;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.dynamic-services {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero-subtitle span{
+.dynamic-services-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 40px rgba(0, 17, 54, 0.08);
+    width: 450px; /* Fixed width to prevent jumping */
+    max-width: 100%;
+    border: 1px solid rgba(0, 17, 54, 0.05);
+}
+
+.dynamic-services-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.dynamic-services .service-title {
+    color: #001136;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.dynamic-services .service-price {
+    color: #4a556d;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    background: #f4f7fa;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 17, 54, 0.05);
+}
+
+.dynamic-services .service-price span {
+    font-size: 26px;
+    font-weight: 800;
+    color: #001136;
+}
+
+.hero-btn-inline {
+    width: max-content;
+    height: 56px;
+    background: #001136;
+    border-radius: 100px;
+    padding: 0 24px 0 6px;
     display: inline-flex;
     align-items: center;
+    gap: 12px;
+}
+
+.dynamic-services.fade-out .service-title,
+.dynamic-services.fade-out .service-price {
+    opacity: 0;
+}
+
+/* =========================
+   CONSULTATION MODAL
+========================= */
+
+.consultation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    
-    width: 28px;
-    height: 28px;
-    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.consultation-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 17, 54, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 10;
+    width: 900px;
+    max-width: 95%;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(30px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.consultation-modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: #676e7a;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 11;
+}
+
+.modal-left {
+    flex: 0 0 35%; /* Fixed the collapse issue */
+    background: #eef2f6;
+    border-radius: 20px 0 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-left img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+    display: block;
+}
+
+.modal-right {
+    flex: 0 0 65%;
+    padding: 0;
+}
+
+.modal-header-blue {
     background: #0066ff;
+    padding: 20px 30px;
+    border-radius: 0 20px 0 0;
+    text-align: center;
+}
+
+.modal-header-blue h3 {
+    font-size: 22px;
     color: #ffffff;
-    border-radius: 50%;
-    
-    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.modal-header-blue p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.consultation-form {
+    padding: 20px 30px 25px;
+}
+
+.consultation-form .form-group {
+    margin-bottom: 12px;
+}
+
+.consultation-form .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.consultation-form .form-row > * {
+    flex: 1;
+}
+
+.consultation-form input[type="text"],
+.consultation-form input[type="email"],
+.consultation-form input[type="tel"],
+.consultation-form select {
+    width: 100%;
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid #e8edf4;
+    border-radius: 8px;
+    background: #f9fbfd;
+    font-size: 14px;
+    color: #001136;
+    outline: none;
+    transition: 0.3s;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus {
+    border-color: #0066ff;
+    background: #ffffff;
+}
+
+.radio-section {
+    background: #f9fbfd;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #e8edf4;
+}
+
+.radio-section > label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #001136;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.radio-group label {
+    font-size: 13px;
+    color: #4a556d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.modal-submit-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+    .modal-left {
+        width: 100%;
+        height: 150px;
+        border-radius: 20px 20px 0 0;
+    }
+    .modal-left img {
+        height: 200px;
+        max-width: none;
+    }
+    .modal-right {
+        width: 100%;
+        padding: 0;
+    }
+    .modal-header-blue {
+        padding: 25px;
+        border-radius: 0;
+    }
+    .consultation-form {
+        padding: 25px;
+    }
+    .consultation-form .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =========================
