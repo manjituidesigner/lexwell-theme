@@ -471,11 +471,6 @@
 
             <div class="hero-content">
 
-                <!-- SUBTITLE BADGE -->
-                <div class="hero-subtitle">
-                    NUMBER <span>#1</span> SOLVER AGENCY
-                </div>
-
                 <h1>
                     Trusted Legal &
                     <span>Business Compliance</span>
@@ -483,23 +478,24 @@
                     <span>Companies.</span>
                 </h1>
 
-                <p>
-                    From company registration and GST filing to trademark protection and legal advisory — Lexwell helps businesses across India stay compliant, secure, and growth-ready.
-                </p>
-
-                <!-- BUTTON -->
-
-                <a href="#" class="hero-btn hover-shine">
-
-                    <span class="hero-btn-icon">
-                        <i class="bi bi-arrow-right"></i>
-                    </span>
-
-                    <span class="hero-btn-text">
-                        Free consultation
-                    </span>
-
-                </a>
+                <!-- DYNAMIC ANIMATED SERVICES -->
+                <div class="dynamic-services" id="dynamic-services-container">
+                    <div class="dynamic-services-box">
+                        <div class="dynamic-services-top">
+                            <h3 id="animated-service-title" class="service-title">Trademark Registration</h3>
+                            <p id="animated-service-price" class="service-price">Packages Starting @ <span>₹999/-</span></p>
+                        </div>
+                        
+                        <a href="javascript:void(0)" id="openConsultationModal" class="hero-btn-inline hover-shine full-width-btn">
+                            <span class="hero-btn-icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </span>
+                            <span class="hero-btn-text">
+                                Book Free Consultation
+                            </span>
+                        </a>
+                    </div>
+                </div>
 
             </div>
 
@@ -512,7 +508,7 @@
                 <div class="hero-main-image hover-shine">
 
                     <img
-                        src="https://solvior.themejunction.net/wp-content/uploads/2025/05/h5-hero.webp"
+                        src="assets/images/hero-woman.png"
                         alt="hero"
                     >
 
@@ -2406,6 +2402,81 @@
         });
     });
 </script>
-</body>
+<!-- CONSULTATION MODAL -->
+<div class="consultation-modal" id="consultationModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-left">
+            <img src="assets/images/hero-woman.png" alt="Consultant">
+        </div>
+        <div class="modal-right">
+            <div class="modal-header-blue">
+                <h3>Hassle Free Book your Free Consultation Today</h3>
+                <p>Our advisor will contact you shortly for your help</p>
+            </div>
+            <form class="consultation-form">
+                <div class="form-group form-row">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group form-row">
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="City" required>
+                </div>
+                <div class="form-group form-row">
+                    <select required>
+                        <option value="" disabled selected>I Am A...</option>
+                        <option>Startup Founder</option>
+                        <option>Business Owner</option>
+                        <option>Freelancer</option>
+                        <option>Individual</option>
+                        <option>CA / Consultant</option>
+                        <option>Partnership Firm</option>
+                        <option>Private Limited Company</option>
+                        <option>Other</option>
+                    </select>
+                    <select required>
+                        <option value="" disabled selected>Select Service...</option>
+                        <option>Trademark Registration</option>
+                        <option>GST Registration</option>
+                        <option>Private Limited Company</option>
+                        <option>LLP Registration</option>
+                        <option>FSSAI License</option>
+                        <option>ISO Certification</option>
+                        <option>ITR Filing</option>
+                        <option>Accounting Services</option>
+                        <option>Import Export Code</option>
+                        <option>Startup India Registration</option>
+                        <option>Legal Consultation</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group form-row">
+                    <select required>
+                        <option value="" disabled selected>How Soon Do You Need It?</option>
+                        <option>Immediately</option>
+                        <option>Within 1 Week</option>
+                        <option>Within 1 Month</option>
+                        <option>Just Exploring</option>
+                    </select>
+                </div>
+                <div class="form-group radio-section">
+                    <label>Business Status:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="business_status" value="Just Starting"> Just Starting</label>
+                        <label><input type="radio" name="business_status" value="Already Running"> Already Running</label>
+                        <label><input type="radio" name="business_status" value="Need Compliance Support"> Need Compliance Support</label>
+                        <label><input type="radio" name="business_status" value="Need Consultation First"> Need Consultation First</label>
+                    </div>
+                </div>
+                <button type="submit" class="tj-primary-btn modal-submit-btn">
+                    Book Free Consultation
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
 
+</body>
 </html>
