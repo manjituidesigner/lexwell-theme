@@ -57,6 +57,8 @@ img{
 
 .container{
     max-width: 1320px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 
@@ -222,7 +224,7 @@ img{
 .footer-newsletter h2{
     max-width: 300px;
 
-    font-size: 34px;
+    font-size: 28px;
     line-height: 1.08;
 
     font-weight: 700;
@@ -693,7 +695,7 @@ img{
 
     color: #001136;
 
-    font-size: 32px;
+    font-size: 27px;
 }
 
 /* =========================
@@ -903,7 +905,7 @@ img{
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 32px;
+    font-size: 27px;
     background: none;
     border: none;
     color: #676e7a;
@@ -1078,7 +1080,7 @@ img{
 
     color: #001136;
 
-    font-size: 52px;
+    font-size: 44px;
     line-height: 1.1;
 
     letter-spacing: -1px;
@@ -1325,7 +1327,7 @@ img{
 @media(max-width: 1399px){
 
     .hero-content h1{
-        font-size: 58px;
+        font-size: 49px;
     }
 
 }
@@ -1358,7 +1360,7 @@ img{
     }
 
     .hero-content h1{
-        font-size: 46px;
+        font-size: 39px;
 
         letter-spacing: -2px;
     }
@@ -1649,7 +1651,7 @@ img{
 
     color: rgba(255,255,255,0.05);
 
-    font-size: 74px;
+    font-size: 62px;
     line-height: 1;
 
     font-weight: 700;
@@ -1869,7 +1871,7 @@ img{
     }
 
     .feature-number{
-        font-size: 58px;
+        font-size: 49px;
     }
 
 }
@@ -1981,7 +1983,7 @@ img{
 
     color: #fff;
 
-    font-size: 72px;
+    font-size: 61px;
     line-height: 0.95;
 
     letter-spacing: -3px;
@@ -2078,7 +2080,7 @@ img{
 
     color: #001136;
 
-    font-size: 66px;
+    font-size: 56px;
     line-height: 0.96;
 
     letter-spacing: -3px;
@@ -2129,7 +2131,7 @@ img{
 
     color: #001136;
 
-    font-size: 78px;
+    font-size: 66px;
     line-height: 0.9;
 
     letter-spacing: -4px;
@@ -2267,13 +2269,13 @@ img{
     }
 
     .about-right h2{
-        font-size: 42px;
+        font-size: 35px;
 
         letter-spacing: -1px;
     }
 
     .about-overlay h3{
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .about-counter-wrapper{
@@ -2287,7 +2289,7 @@ img{
     }
 
     .about-counter-item h3{
-        font-size: 56px;
+        font-size: 47px;
     }
 
     .about-small-image{
@@ -2365,7 +2367,7 @@ img{
 
     color: #001136;
 
-    font-size: 54px;
+    font-size: 45px;
     line-height: 0.96;
 
     letter-spacing: -3px;
@@ -2500,7 +2502,7 @@ img{
 
     color: #0066ff;
 
-    font-size: 34px;
+    font-size: 28px;
 
     margin: 0 auto 50px;
 
@@ -2751,7 +2753,7 @@ img{
     }
 
     .service-heading h2{
-        font-size: 42px;
+        font-size: 35px;
 
         letter-spacing: -1px;
     }
@@ -2846,7 +2848,7 @@ img{
 
     color: #001136;
 
-    font-size: 68px;
+    font-size: 57px;
     line-height: 0.96;
 
     letter-spacing: -3px;
@@ -3017,7 +3019,7 @@ img{
     }
 
     .work-heading h2{
-        font-size: 42px;
+        font-size: 35px;
 
         letter-spacing: -1px;
     }
@@ -3091,7 +3093,7 @@ img{
 
     color: #001136;
 
-    font-size: 68px;
+    font-size: 57px;
     line-height: 0.96;
 
     letter-spacing: -3px;
@@ -3212,7 +3214,7 @@ img{
 
     color: #001136;
 
-    font-size: 34px;
+    font-size: 28px;
     line-height: 1.02;
 
     letter-spacing: -1.5px;
@@ -3327,7 +3329,7 @@ img{
 @media(max-width: 1199px){
 
     .project-top h2{
-        font-size: 58px;
+        font-size: 49px;
     }
 
     .project-image img{
@@ -3355,7 +3357,7 @@ img{
     }
 
     .project-top h2{
-        font-size: 42px;
+        font-size: 35px;
 
         letter-spacing: -1px;
     }
@@ -3408,7 +3410,7 @@ img{
     display: grid;
     grid-template-columns: 0.9fr 1.4fr;
 
-    gap: 70px;
+    gap: 30px;
 
     align-items: center;
 }
@@ -3456,7 +3458,7 @@ img{
 
     color: #001136;
 
-    font-size: 68px;
+    font-size: 49px;
     line-height: 0.96;
 
     letter-spacing: -3px;
@@ -3569,6 +3571,8 @@ img{
     padding: 20px;
 
     background: transparent;
+    
+    min-width: 0; /* Fix for Swiper in Grid */
 }
 
 /* =========================
@@ -3597,7 +3601,7 @@ img{
 
     color: #001136;
 
-    font-size: 34px;
+    font-size: 28px;
     line-height: 1;
 
     font-weight: 700;
@@ -3617,7 +3621,7 @@ img{
 .currency{
     color: #001136;
 
-    font-size: 34px;
+    font-size: 28px;
     line-height: 1;
 
     font-weight: 500;
@@ -3631,10 +3635,10 @@ img{
 
     color: #001136;
 
-    font-size: 92px;
-    line-height: 0.85;
+    font-size: 61px;
+    line-height: 0.95;
 
-    letter-spacing: -4px;
+    letter-spacing: -2px;
 
     font-weight: 700;
 }
@@ -3773,7 +3777,7 @@ img{
 
     color: rgba(0,17,54,0.06);
 
-    font-size: 88px;
+    font-size: 74px;
     line-height: 1;
 
     font-weight: 700;
@@ -3800,7 +3804,7 @@ img{
     }
 
     .pricing-left h2{
-        font-size: 44px;
+        font-size: 37px;
 
         letter-spacing: -1px;
     }
@@ -3818,7 +3822,7 @@ img{
     }
 
     .pricing-price h3{
-        font-size: 70px;
+        font-size: 59px;
     }
 
     .pricing-watermark{
@@ -3926,7 +3930,7 @@ img{
 
     color: #fff;
 
-    font-size: 66px;
+    font-size: 56px;
     line-height: 1;
 
     letter-spacing: -3px;
@@ -4084,7 +4088,7 @@ img{
 .testimonial-quote{
     color: #0066ff;
 
-    font-size: 70px;
+    font-size: 59px;
     line-height: 1;
 }
 
@@ -4126,7 +4130,7 @@ img{
     }
 
     .testimonial-top h2{
-        font-size: 42px;
+        font-size: 35px;
 
         letter-spacing: -1px;
     }
@@ -4224,7 +4228,7 @@ img{
 
     color: #001136;
 
-    font-size: 68px;
+    font-size: 57px;
     line-height: 0.96;
 
     letter-spacing: -3px;
@@ -4480,7 +4484,7 @@ img{
     }
 
     .blog-heading h2{
-        font-size: 42px;
+        font-size: 35px;
 
         letter-spacing: -1px;
     }
@@ -4549,7 +4553,7 @@ img{
 .cta-content h2{
     max-width: 470px;
 
-    font-size: 58px;
+    font-size: 49px;
     line-height: 1.05;
 
     font-weight: 700;
@@ -4648,7 +4652,7 @@ img{
     }
 
     .cta-content h2{
-        font-size: 48px;
+        font-size: 40px;
     }
 
 }
@@ -4656,7 +4660,7 @@ img{
 @media(max-width: 767px){
 
     .cta-content h2{
-        font-size: 38px;
+        font-size: 32px;
 
         letter-spacing: -1px;
     }
@@ -4753,7 +4757,7 @@ img{
     }
 
     .footer-newsletter h2{
-        font-size: 32px;
+        font-size: 27px;
     }
 
     .footer-bottom-wrapper{
@@ -5738,7 +5742,7 @@ h1, h2, h3, h4, h5, h6{
 .counter-item .number{
     display: inline-flex;
     align-items: center;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 1;
 }
@@ -5792,7 +5796,7 @@ h1, h2, h3, h4, h5, h6{
         gap: 30px;
     }
     .hero-content h1{
-        font-size: 42px;
+        font-size: 35px;
     }
     .navbar-wrapper{
         gap: 15px;
@@ -5828,7 +5832,7 @@ h1, h2, h3, h4, h5, h6{
         background: transparent;
     }
     .hero-content h1{
-        font-size: 36px;
+        font-size: 30px;
     }
     .hero-main-image{
         height: 300px;

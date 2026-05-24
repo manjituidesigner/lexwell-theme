@@ -33,16 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Modal Logic
-    const openBtn = document.getElementById("openConsultationModal");
+    const openBtns = document.querySelectorAll(".openConsultationModalBtn");
     const modal = document.getElementById("consultationModal");
     const closeBtn = document.getElementById("modalClose");
     const overlay = document.getElementById("modalOverlay");
 
-    if (openBtn && modal && closeBtn && overlay) {
-        openBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            modal.classList.add("show");
-            document.body.style.overflow = "hidden"; // Prevent scrolling
+    if (openBtns.length > 0 && modal && closeBtn && overlay) {
+        openBtns.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                modal.classList.add("show");
+                document.body.style.overflow = "hidden"; // Prevent scrolling
+            });
         });
 
         const closeModal = () => {
@@ -52,5 +54,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         closeBtn.addEventListener("click", closeModal);
         overlay.addEventListener("click", closeModal);
+    }
+
+    // Pricing Swiper Initialization
+    if (document.querySelector('.pricing-swiper')) {
+        new Swiper('.pricing-swiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            observer: true,
+            observeParents: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.pricing-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.pricing-button-next',
+                prevEl: '.pricing-button-prev',
+            },
+        });
     }
 });
