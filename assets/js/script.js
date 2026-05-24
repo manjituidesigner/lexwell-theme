@@ -59,9 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Pricing Swiper Initialization
     if (document.querySelector('.pricing-swiper')) {
         new Swiper('.pricing-swiper', {
-            loop: true,
+            direction: 'vertical',
+            loop: false,
             slidesPerView: 1,
             spaceBetween: 30,
+            mousewheel: {
+                releaseOnEdges: true,
+            },
             observer: true,
             observeParents: true,
             autoplay: {
@@ -71,10 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
             pagination: {
                 el: '.pricing-pagination',
                 clickable: true,
-            },
-            navigation: {
-                nextEl: '.pricing-button-next',
-                prevEl: '.pricing-button-prev',
             },
         });
     }

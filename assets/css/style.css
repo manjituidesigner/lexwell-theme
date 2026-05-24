@@ -792,9 +792,14 @@ img{
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 10px 40px rgba(0, 17, 54, 0.08);
-    width: 450px; /* Fixed width to prevent jumping */
+    width: 450px;
     max-width: 100%;
     border: 1px solid rgba(0, 17, 54, 0.05);
+}
+
+@keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .dynamic-services-top {
@@ -824,13 +829,39 @@ img{
     background: #f4f7fa;
     padding: 8px 20px;
     border-radius: 100px;
-    border: 1px solid rgba(0, 17, 54, 0.05);
+    
+    /* Running border setup */
+    position: relative;
+    border: none;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dynamic-services .service-price::before {
+    content: "";
+    position: absolute;
+    top: -50%; left: -50%; right: -50%; bottom: -50%;
+    background: conic-gradient(from 0deg, transparent 70%, #0066ff 100%);
+    z-index: -2;
+    animation: rotateBorder 3s linear infinite;
+}
+
+.dynamic-services .service-price::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #f4f7fa;
+    border-radius: 98px;
+    z-index: -1;
 }
 
 .dynamic-services .service-price span {
     font-size: 26px;
     font-weight: 800;
-    color: #001136;
+    color: #e63946 !important;
 }
 
 .hero-btn-inline {
@@ -1249,8 +1280,8 @@ img{
 .hero-client-box{
     position: absolute;
 
-    left: -60px;
-    bottom: 60px;
+    left: -160px;
+    bottom: 195px;
 
     width: max-content;
     max-width: 250px;
@@ -3575,6 +3606,10 @@ img{
     min-width: 0; /* Fix for Swiper in Grid */
 }
 
+.pricing-swiper {
+    height: 450px;
+}
+
 /* =========================
    CARD
 ========================= */
@@ -5839,3 +5874,61 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
+
+/* =========================
+   CUSTOM PRICING COLORS & ANIMATIONS
+========================= */
+
+.swiper-slide:nth-child(8n+1) .pricing-card-left { background: #eef7fc !important; }
+.swiper-slide:nth-child(8n+2) .pricing-card-left { background: #f8effa !important; }
+.swiper-slide:nth-child(8n+3) .pricing-card-left { background: #fdf8e9 !important; }
+.swiper-slide:nth-child(8n+4) .pricing-card-left { background: #fdf2eb !important; }
+.swiper-slide:nth-child(8n+5) .pricing-card-left { background: #edf9f5 !important; }
+.swiper-slide:nth-child(8n+6) .pricing-card-left { background: #f1f0ff !important; }
+.swiper-slide:nth-child(8n+7) .pricing-card-left { background: #fffcf0 !important; }
+.swiper-slide:nth-child(8n) .pricing-card-left { background: #eef3fb !important; }
+
+.swiper-slide-active .pricing-card-left h4,
+.swiper-slide-active .pricing-price,
+.swiper-slide-active .pricing-card-left p,
+.swiper-slide-active .pricing-btn {
+    animation: slideUpFade 0.6s ease forwards;
+    opacity: 0;
+}
+.swiper-slide-active .pricing-card-left h4 { animation-delay: 0.1s; }
+.swiper-slide-active .pricing-price { animation-delay: 0.2s; }
+.swiper-slide-active .pricing-card-left p { animation-delay: 0.3s; }
+.swiper-slide-active .pricing-btn { animation-delay: 0.4s; }
+
+.swiper-slide-active .pricing-card-right ul li {
+    animation: slideRightFade 0.5s ease forwards;
+    opacity: 0;
+}
+.swiper-slide-active .pricing-card-right ul li:nth-child(1) { animation-delay: 0.1s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(2) { animation-delay: 0.2s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(3) { animation-delay: 0.3s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(4) { animation-delay: 0.4s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(5) { animation-delay: 0.5s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(6) { animation-delay: 0.6s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(7) { animation-delay: 0.7s; }
+.swiper-slide-active .pricing-card-right ul li:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideRightFade {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* =========================
+   HERO CARD GLOW & FIXES
+========================= */
+
+
+
+.hero-client-box {
+    z-index: 10 !important;
+}
