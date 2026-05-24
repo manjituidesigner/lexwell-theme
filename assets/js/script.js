@@ -79,3 +79,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
+    // Compliance Alerts Slider Logic
+    const complianceSlides = document.querySelectorAll('.compliance-slide');
+    const complianceDots = document.querySelectorAll('.feature-slider-dots span');
+    let currentComplianceIndex = 0;
+
+    if (complianceSlides.length > 0) {
+        setInterval(() => {
+            complianceSlides[currentComplianceIndex].classList.remove('active');
+            complianceDots[currentComplianceIndex].classList.remove('active');
+            
+            currentComplianceIndex = (currentComplianceIndex + 1) % complianceSlides.length;
+            
+            // Update watermark
+            const watermark = document.querySelector('.compliance-watermark');
+            if(watermark) {
+                watermark.textContent = '0' + (currentComplianceIndex + 1);
+            }
+            
+            complianceSlides[currentComplianceIndex].classList.add('active');
+            complianceDots[currentComplianceIndex].classList.add('active');
+        }, 4000); // Change every 4 seconds
+    }

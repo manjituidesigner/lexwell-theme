@@ -5932,3 +5932,66 @@ h1, h2, h3, h4, h5, h6{
 .hero-client-box {
     z-index: 10 !important;
 }
+
+
+
+
+/* =========================
+   COMPLIANCE SLIDER IN FEATURE CARD
+========================= */
+.compliance-slider {
+    position: relative;
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+.compliance-slide {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    background: #101935;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(10px);
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.compliance-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.compliance-slide p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #e2e8f0;
+}
+
+.compliance-slide .slide-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #ffb703;
+    font-size: 18px;
+}
+
+.compliance-slide i {
+    margin-right: 5px;
+}
+
+.compliance-slide .progress-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #e63946, transparent);
+    width: 0%;
+}
+
+.compliance-slide.active .progress-line {
+    animation: progressFill 4s linear forwards;
+}
